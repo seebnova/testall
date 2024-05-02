@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <table id="myTable">
+
+        <tr>
+
+            <th>Name</th>
+
+            <th>Age</th>
+
+            <th>city</th>
+
+        </tr>
+
+    </table>
+
+</body>
+
+<script>
+
+    var jsonData = {
+
+        "data": [
+
+            { "name": "abc", "age": "29", "city": "abc" },
+
+            { "name": "abc", "age": "29", "city": "abc" },
+
+            { "name": "abc", "age": "29", "city": "abc" },
+
+            { "name": "abc", "age": "29", "city": "abc" }
+
+        ]
+
+    }
+
+    jsonData.data.forEach(createData);
+
+    function createData(item,index){
+
+        var table = document.getElementById("myTable");
+
+        var row = table.insertRow();
+
+        var cell1 = row.insertCell();
+
+        var cell2 = row.insertCell();
+
+        var cell3 = row.insertCell();
+
+        cell1.innerHTML = item.name;
+
+        cell2.innerHTML = item.age;
+
+        cell3.innerHTML = item.city;
+
+    }
+
+</script>
+
+</html>
